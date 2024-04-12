@@ -12,7 +12,7 @@ def ask(api_key:str, prompt:list, history=[]):
         messages= history,
         model="gpt-3.5-turbo",
         #response_format= {"type":"json_object"},
-        temperature = 0.5
+        temperature = 0.7
     )
     history.append({"role":"assistant", "content":respond.choices[0].message.content})
     
